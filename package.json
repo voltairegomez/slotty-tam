@@ -1,0 +1,21 @@
+{
+  "name": "slotty-tam",
+  "version": "2.0.0",
+  "description": "Slotty Tam — fun discovery platform. Vercel serverless API + Turso (libSQL) database.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "express": "^4.21.2"
+  },
+  "author": "Pure Design Werx",
+  "license": "UNLICENSED"
+}
