@@ -1,5 +1,5 @@
 {
-  "version": "11-merch-photos",
+  "version": "12-belmont-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -280,7 +280,8 @@
       "featured": 0, "featured_slot": null, "tams_pick": 1,
       "tam_quote": "Ride the Giant Dipper at sunset, grab a churro, walk the boardwalk. Cheap, classic, so San Diego.",
       "tam_rating": 4.5, "badge": "New", "thumb_class": "g4",
-      "image_url": "https://loremflickr.com/800/600/rollercoaster?lock=128"
+      "image_url": "/images/belmont.jpg",
+      "image_credit": "Photo: Belmont Park, Mission Beach"
     },
     {
       "name": "Topgolf San Diego", "category": "activity", "city": "San Diego", "state": "CA",
