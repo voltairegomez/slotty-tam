@@ -1,5 +1,5 @@
 {
-  "version": "10-jamul-photo",
+  "version": "11-merch-photos",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -325,11 +325,11 @@
     { "name": "Anza-Borrego Desert", "emoji": "🌵", "distance_label": "~2 hr east", "blurb": "California's largest state park — spring wildflowers and jaw-dropping dark skies.", "tags": ["Desert", "Nature", "Stargazing"], "accent": "b", "image_url": "https://loremflickr.com/800/600/desert,stars?lock=145" }
   ],
   "merch": [
-    { "name": "Slotty Tam Neon Tee", "price": 38, "emoji": "👕", "badge": "Best Seller", "thumb_class": "m1", "sold_count": 1240 },
-    { "name": "Sunset Cliffs Trucker Hat", "price": 32, "emoji": "🧢", "badge": null, "thumb_class": "m2", "sold_count": 860 },
-    { "name": "Gaslamp Nights Tumbler", "price": 44, "emoji": "🥤", "badge": "New Drop", "thumb_class": "m3", "sold_count": 210 },
-    { "name": "SD Casino Crawl Hoodie", "price": 75, "emoji": "🧥", "badge": null, "thumb_class": "m4", "sold_count": 540 },
-    { "name": "Baja Road Trip Sticker Pack", "price": 14, "emoji": "🌊", "badge": null, "thumb_class": "m5", "sold_count": 1980 }
+    { "name": "Slotty Tam Tee", "price": 38, "emoji": "👕", "badge": "Best Seller", "thumb_class": "m1", "sold_count": 1240, "image_url": "/images/merch-tee.jpg" },
+    { "name": "Slotty Tam Cap", "price": 32, "emoji": "🧢", "badge": null, "thumb_class": "m2", "sold_count": 860, "image_url": "/images/merch-hat.jpg" },
+    { "name": "Slotty Tam Tumbler", "price": 44, "emoji": "🥤", "badge": "New Drop", "thumb_class": "m3", "sold_count": 210, "image_url": "/images/merch-tumbler.jpg" },
+    { "name": "Slotty Tam Hoodie", "price": 75, "emoji": "🧥", "badge": null, "thumb_class": "m4", "sold_count": 540, "image_url": "/images/merch-hoodie.jpg" },
+    { "name": "Slotty Tam Sticker Pack", "price": 14, "emoji": "🌊", "badge": null, "thumb_class": "m5", "sold_count": 1980, "image_url": "/images/merch-stickers.jpg" }
   ],
   "giveaway": {
     "title": "Win a VIP Casino Night for 2 at Viejas + $500 San Diego Dining Credit",
