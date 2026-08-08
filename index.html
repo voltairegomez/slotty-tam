@@ -156,9 +156,13 @@
   }
 
   .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 2rem; }
-  .hero-socials{display:flex;gap:.6rem;justify-content:center;margin-bottom:1rem;flex-wrap:wrap;}
-  .hero-social{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:600;letter-spacing:.03em;color:var(--white);text-decoration:none;padding:.4rem .9rem;border-radius:50px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);transition:all .25s;}
-  .hero-social:hover{border-color:var(--neon-pink);background:rgba(255,45,120,0.15);transform:translateY(-2px);}
+  .hero-socials{display:flex;gap:.75rem;align-items:center;justify-content:center;margin-bottom:1.25rem;flex-wrap:wrap;}
+  .hero-social-label{font-size:.9rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);opacity:.92;}
+  .hero-social{display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;font-weight:700;letter-spacing:.02em;color:var(--white);text-decoration:none;padding:.6rem 1.3rem;border-radius:50px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.22);transition:all .25s;}
+  .hero-social svg{width:24px;height:24px;flex-shrink:0;}
+  .hero-social.ig svg{fill:#E1306C;}
+  .hero-social.yt svg{fill:#FF0000;}
+  .hero-social:hover{border-color:var(--neon-pink);background:rgba(255,45,120,0.18);transform:translateY(-2px);}
   .hero-badge {
     display: inline-flex;
     align-items: center;
@@ -1234,8 +1238,9 @@
 
   <div class="hero-content">
     <div class="hero-socials fade-up">
-      <a class="hero-social" href="https://www.instagram.com/slotty_tam/" target="_blank" rel="noopener">📸 Instagram</a>
-      <a class="hero-social" href="https://www.youtube.com/@SlottyTam" target="_blank" rel="noopener">▶️ YouTube</a>
+      <span class="hero-social-label">Follow Slotty Tam on</span>
+      <a class="hero-social ig" href="https://www.instagram.com/slotty_tam/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.5528 2.9137-.0572 1.2772-.0705 1.6882-.0645 4.9502.006 3.262.0207 3.6708.0838 4.9509.0602 1.2765.264 2.1482.5635 2.9105.3079.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.5528 1.2773.0567 1.6884.0705 4.9502.0645 3.2618-.006 3.6723-.0207 4.9527-.0836 1.2805-.0629 2.1471-.264 2.9098-.5619.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.5528-2.9124.0563-1.2809.0705-1.6898.0645-4.9518-.006-3.262-.0207-3.6708-.0836-4.9504-.0629-1.2796-.264-2.1487-.5628-2.9105-.3084-.7889-.72-1.4573-1.3877-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0629 15.6471.0062 15.236-.0076 11.9742-.0016 8.7124.0044 8.3034.0187 7.0301.0841m.1408 21.6667c-1.17-.0509-1.8054-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.4219-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.0508-1.169.2464-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.4229-.1651 1.0568-.3614 2.2262-.4171 1.2656-.06 1.6448-.0723 4.848-.0794 3.2032-.007 3.5834.0053 4.8496.0608 1.169.0511 1.8056.2447 2.2284.408.5606.216.96.4757 1.3816.895.4216.4193.6816.8176.9006 1.3787.1653.4212.3617 1.056.4169 2.2258.0602 1.2645.0739 1.6442.0805 4.848.0066 3.2038-.0055 3.5834-.061 4.848-.0511 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.165-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4069 2.7729 6.1622 6.1799 6.1552 3.407-.007 6.1643-2.7729 6.1576-6.1799-.0067-3.407-2.774-6.1625-6.1814-6.1552-3.4074.0074-6.1618 2.7739-6.1561 6.1799M8 12.0033a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0033"/></svg><span>Instagram</span></a>
+      <a class="hero-social yt" href="https://www.youtube.com/@SlottyTam" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></a>
     </div>
     <div class="hero-badge fade-up">The Ultimate Fun Discovery Platform</div>
     <h1 class="hero-title fade-up fade-up-d1">
