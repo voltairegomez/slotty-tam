@@ -1,5 +1,5 @@
 {
-  "version": "9-pauma-photo",
+  "version": "10-jamul-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -70,7 +70,8 @@
       "emoji": "🎰", "rating": 4.3, "price_label": "Free Entry",
       "tags": ["San Diego", "Jamul", "Casino", "Close to Downtown"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": "Close", "thumb_class": "g3",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=107"
+      "image_url": "/images/jamul.jpg",
+      "image_credit": "Photo: Jamul Casino Resort"
     },
     {
       "name": "Casino Pauma", "category": "casino", "city": "Pauma Valley", "state": "CA",
