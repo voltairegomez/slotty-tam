@@ -1,5 +1,5 @@
 {
-  "version": "8-valleyview-photo",
+  "version": "9-pauma-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -79,7 +79,8 @@
       "emoji": "🎰", "rating": 4.3, "price_label": "Free Entry",
       "tags": ["San Diego", "Pauma Valley", "Casino", "Local Favorite"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g2",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=108"
+      "image_url": "/images/pauma.jpg",
+      "image_credit": "Photo: Casino Pauma"
     },
     {
       "name": "Golden Acorn Casino", "category": "casino", "city": "Campo", "state": "CA",
