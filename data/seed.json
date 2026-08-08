@@ -1,5 +1,5 @@
 {
-  "version": "4-viejas-photo",
+  "version": "5-barona-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -30,7 +30,8 @@
       "emoji": "🎲", "rating": 4.5, "price_label": "Free Entry",
       "tags": ["San Diego", "Lakeside", "Casino", "Golf", "Resort"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g3",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=103"
+      "image_url": "/images/barona.jpg",
+      "image_credit": "Photo: Barona Resort & Casino"
     },
     {
       "name": "Harrah's Resort Southern California", "category": "casino", "city": "Funner", "state": "CA",
