@@ -1,5 +1,5 @@
 {
-  "version": "6-pala-photo",
+  "version": "7-harrahs-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -40,7 +40,8 @@
       "emoji": "🎰", "rating": 4.4, "price_label": "Free Entry",
       "tags": ["San Diego", "Valley Center", "Casino", "Pool", "Resort"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g2",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=104"
+      "image_url": "/images/harrahs.jpg",
+      "image_credit": "Photo: Harrah's Resort Southern California"
     },
     {
       "name": "Pala Casino Spa & Resort", "category": "casino", "city": "Pala", "state": "CA",
