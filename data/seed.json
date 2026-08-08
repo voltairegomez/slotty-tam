@@ -1,5 +1,5 @@
 {
-  "version": "12-belmont-photo",
+  "version": "13-palmsprings-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -322,7 +322,7 @@
     { "name": "Julian", "emoji": "🥧", "distance_label": "~60 mi east", "blurb": "Historic gold-mining mountain town famous for apple pie and fall color.", "tags": ["Mountains", "Food", "Cozy"], "accent": "r", "image_url": "https://loremflickr.com/800/600/mountains,town?lock=141" },
     { "name": "Coronado Island", "emoji": "🏖️", "distance_label": "~15 min", "blurb": "The Hotel del, a golden beach, and a bayfront bike path minutes from downtown.", "tags": ["Beach", "Iconic", "Easy"], "accent": "v", "image_url": "https://loremflickr.com/800/600/beach,coronado?lock=142" },
     { "name": "Valle de Guadalupe", "emoji": "🍷", "distance_label": "~2 hr south (Baja)", "blurb": "Baja's booming wine country — world-class food and desert vineyards. Bring a passport.", "tags": ["Wine", "Baja", "Foodie"], "accent": "a", "image_url": "https://loremflickr.com/800/600/vineyard,desert?lock=143" },
-    { "name": "Palm Springs", "emoji": "🌴", "distance_label": "~2 hr north", "blurb": "Mid-century modern, pools, and desert nightlife — the classic weekend escape.", "tags": ["Desert", "Pools", "Weekend"], "accent": "n", "image_url": "https://loremflickr.com/800/600/palmsprings,desert?lock=144" },
+    { "name": "Palm Springs", "emoji": "🌴", "distance_label": "~2 hr north", "blurb": "Mid-century modern, pools, and desert nightlife — the classic weekend escape.", "tags": ["Desert", "Pools", "Weekend"], "accent": "n", "image_url": "/images/palmsprings.jpg" },
     { "name": "Anza-Borrego Desert", "emoji": "🌵", "distance_label": "~2 hr east", "blurb": "California's largest state park — spring wildflowers and jaw-dropping dark skies.", "tags": ["Desert", "Nature", "Stargazing"], "accent": "b", "image_url": "https://loremflickr.com/800/600/desert,stars?lock=145" }
   ],
   "merch": [
