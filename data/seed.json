@@ -1,5 +1,5 @@
 {
-  "version": "2-sandiego",
+  "version": "3-sycuan-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -19,7 +19,8 @@
       "tags": ["San Diego", "El Cajon", "Casino", "Resort", "Pool"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g2",
       "jackpot": { "resort_credit": "$500", "table_games": 54, "restaurants": "12+" },
-      "image_url": "https://loremflickr.com/800/600/casino?lock=102"
+      "image_url": "/images/sycuan.jpg",
+      "image_credit": "Photo: Sycuan Casino Resort"
     },
     {
       "name": "Barona Resort & Casino", "category": "casino", "city": "Lakeside", "state": "CA",
