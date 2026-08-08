@@ -1,5 +1,5 @@
 {
-  "version": "7-harrahs-photo",
+  "version": "8-valleyview-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -60,7 +60,8 @@
       "emoji": "🎲", "rating": 4.4, "price_label": "Free Entry",
       "tags": ["San Diego", "Valley Center", "Casino", "Buffet", "Hotel"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g4",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=106"
+      "image_url": "/images/valleyview.jpg",
+      "image_credit": "Photo: Valley View Casino & Hotel"
     },
     {
       "name": "Jamul Casino", "category": "casino", "city": "Jamul", "state": "CA",
