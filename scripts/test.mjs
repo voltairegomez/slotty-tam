@@ -37,8 +37,12 @@ try {
   const all = await get('/api/listings');
   ok(all.total >= 20, `listings present (${all.total})`);
 
-  const vegas = await get('/api/listings?q=vegas');
-  ok(vegas.results.length > 0 && vegas.results.every(r => /vegas/i.test([r.city, r.blurb, r.description, r.tags.join(' ')].join(' '))), 'free-text search works');
+  const lj = await get('/api/listings?q=la jolla');
+  ok(lj.results.length > 0 && lj.results.every(r => /la jolla/i.test([r.city, r.blurb, r.description, r.tags.join(' ')].join(' '))), 'free-text search works');
+
+  ok(all.results.every(r => typeof r.image_url === 'string' && r.image_url.startsWith('http')), 'every listing has an image URL');
+  const sd = await get('/api/listings?q=san diego');
+  ok(sd.total >= 10, `San Diego venues present (${sd.total})`);
 
   const food = await get('/api/listings?pill=food');
   ok(food.results.every(r => ['restaurant', 'buffet'].includes(r.category)), 'pill=food maps to restaurant+buffet');

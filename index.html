@@ -1168,6 +1168,15 @@
   .modal-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.08);border:none;color:var(--white);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:.9rem;}
   .modal-close:hover{background:var(--neon-pink);}
   .modal-emoji{font-size:3rem;text-align:center;margin-bottom:.5rem;}
+  /* Real-photo thumbnails with graceful emoji fallback */
+  .result-thumb,.feat-thumb,.feat-small-thumb,.pick-thumb,.trip-thumb{position:relative;overflow:hidden;}
+  .thumb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+  .thumb-emoji{position:relative;z-index:0;}
+  .trip-thumb .trip-dist{position:relative;z-index:2;}
+  .modal-hero{position:relative;height:170px;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--electric-purple),var(--neon-pink));}
+  .modal-hero .thumb-img{z-index:1;}
+  .modal-hero-emoji{position:relative;z-index:0;}
+  .img-credit{font-size:.56rem;color:var(--muted);margin:-.4rem 0 .8rem;text-align:right;opacity:.8;}
   .modal-card h3{font-size:1.4rem;margin-bottom:.35rem;}
   .modal-input{width:100%;background:var(--black-surface);border:1px solid rgba(255,255,255,0.12);border-radius:50px;padding:.85rem 1.2rem;color:var(--white);font-size:.9rem;margin:1rem 0;font-family:inherit;}
   .modal-input:focus{outline:none;border-color:var(--neon-pink);}
@@ -1180,7 +1189,7 @@
 <nav id="navbar">
   <a class="nav-logo" onclick="scrollTo(0,0)" style="cursor:pointer;">
     Slotty Tam
-    <span>Las Vegas · Food · Nightlife · Hidden Gems</span>
+    <span>San Diego · Food · Nightlife · Hidden Gems</span>
   </a>
   <ul class="nav-links">
     <li><a onclick="scrollToSection('casinos')">Casinos</a></li>
@@ -1555,10 +1564,13 @@ async function runSearch(params, title){
 }
 function closeResults(){ document.getElementById('searchResults').style.display='none'; scrollToSection('hero'); }
 
+// Real photo with emoji fallback: if the image fails to load it removes itself, revealing the emoji.
+function imgTag(url){ return url ? `<img class="thumb-img" src="${esc(url)}" loading="lazy" alt="" onerror="this.remove()">` : ''; }
+
 function resultCard(l){
   const tags=(l.tags||[]).slice(0,3).map(t=>`<span class="chip">${esc(t)}</span>`).join('');
   return `<div class="result-card" onclick='openListing(${l.id})'>
-    <div class="result-thumb">${esc(l.emoji)}</div>
+    <div class="result-thumb">${imgTag(l.image_url)}<span class="thumb-emoji">${esc(l.emoji)}</span></div>
     <div class="result-body">
       <span class="feat-tag" style="font-size:.6rem;">${esc(l.category_meta.icon)} ${esc(l.category_meta.singular)}</span>
       <h4 style="margin-top:.4rem;">${esc(l.name)}</h4>
@@ -1575,8 +1587,10 @@ async function openListing(id){
     const l=await getJSON(`${API}/listings/${id}`);
     const tags=(l.tags||[]).map(t=>`<span class="chip">${esc(t)}</span>`).join(' ');
     const pw=l.password_hint?`<p style="margin-top:.6rem;"><strong style="color:var(--gold)">🗝️ Password hint:</strong> ${esc(l.password_hint)}</p>`:'';
+    const credit=l.image_url&&l.image_credit?`<div class="img-credit">${esc(l.image_credit)}</div>`:'';
     openModal(`
-      <div class="modal-emoji">${esc(l.emoji)}</div>
+      <div class="modal-hero">${imgTag(l.image_url)}<span class="modal-hero-emoji">${esc(l.emoji)}</span></div>
+      ${credit}
       <span class="feat-tag" style="font-size:.65rem;">${esc(l.category_meta.icon)} ${esc(l.category_meta.singular)}</span>
       <h3 style="margin-top:.5rem;">${esc(l.name)}</h3>
       <div class="result-loc">📍 ${esc(l.city)}, ${esc(l.state)} &nbsp;·&nbsp; <span class="rating">★ ${l.rating.toFixed(1)}</span> &nbsp;·&nbsp; ${esc(l.price_label)}</div>
@@ -1673,7 +1687,7 @@ function renderFeatured(data){
   const reels=Array.from({length:9}).map(()=>`<div class="slot-reel">${symbols[Math.floor(Math.random()*symbols.length)]}</div>`).join('');
   const mainHtml=main?`
     <div class="feat-card fade-up" onclick="openListing(${main.id})">
-      <div class="feat-thumb casino"><div class="feat-thumb-inner"><div class="casino-visual">${reels}</div></div></div>
+      <div class="feat-thumb casino">${main.image_url ? imgTag(main.image_url) : `<div class="feat-thumb-inner"><div class="casino-visual">${reels}</div></div>`}</div>
       <div class="feat-info">
         <span class="feat-tag casino">${esc(main.category_meta.icon)} ${esc(main.category_meta.singular)}</span>
         <h3>${esc(main.name)} — ${esc(main.blurb.split('—')[0].trim()||'Featured')}</h3>
@@ -1684,7 +1698,7 @@ function renderFeatured(data){
   const thumbTone={casino:'casino',restaurant:'food',buffet:'food',speakeasy:'secret',show:'night',activity:'g4'};
   const smallHtml=`<div class="feat-small-grid fade-up fade-up-d1">`+small.map(s=>`
       <div class="feat-small" onclick="openListing(${s.id})">
-        <div class="feat-small-thumb ${thumbTone[s.category]||'food'}">${esc(s.emoji)}</div>
+        <div class="feat-small-thumb ${thumbTone[s.category]||'food'}">${imgTag(s.image_url)}<span class="thumb-emoji">${esc(s.emoji)}</span></div>
         <div class="feat-small-info">
           <span class="feat-tag ${thumbTone[s.category]||'food'}" style="font-size:0.55rem;">${esc(s.category_meta.icon)} ${esc(s.category_meta.singular)}</span>
           <h4>${esc(s.name)}</h4>
@@ -1708,7 +1722,7 @@ function renderPicks(list){
         </div>
         <span class="rating" style="font-size:0.9rem;">★ ${(p.tam_rating||p.rating).toFixed(1)}</span>
       </div>
-      <div class="pick-thumb ${esc(p.thumb_class||'g1')}">${esc(p.emoji)}</div>
+      <div class="pick-thumb ${esc(p.thumb_class||'g1')}">${imgTag(p.image_url)}<span class="thumb-emoji">${esc(p.emoji)}</span></div>
       <div class="pick-body">
         <h3>${esc(p.name)}</h3>
         <p>"${esc(p.tam_quote||p.blurb)}"</p>
@@ -1739,7 +1753,7 @@ function renderJackpot(j){
 function renderTrips(list){
   document.getElementById('tripsScroll').innerHTML=list.map(t=>`
     <div class="trip-card" onclick="showToast('Loading ${esc(t.name)}…')">
-      <div class="trip-thumb ${esc(t.accent)}">${esc(t.emoji)}<div class="trip-dist">${esc(t.distance_label)}</div></div>
+      <div class="trip-thumb ${esc(t.accent)}">${imgTag(t.image_url)}<span class="thumb-emoji">${esc(t.emoji)}</span><div class="trip-dist">${esc(t.distance_label)}</div></div>
       <div class="trip-info">
         <h4>${esc(t.name)}</h4>
         <p>${esc(t.blurb)}</p>
