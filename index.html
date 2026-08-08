@@ -156,6 +156,9 @@
   }
 
   .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 2rem; }
+  .hero-socials{display:flex;gap:.6rem;justify-content:center;margin-bottom:1rem;flex-wrap:wrap;}
+  .hero-social{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:600;letter-spacing:.03em;color:var(--white);text-decoration:none;padding:.4rem .9rem;border-radius:50px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);transition:all .25s;}
+  .hero-social:hover{border-color:var(--neon-pink);background:rgba(255,45,120,0.15);transform:translateY(-2px);}
   .hero-badge {
     display: inline-flex;
     align-items: center;
@@ -1230,6 +1233,10 @@
   <div class="float-el" style="top:10%;right:30%;animation-duration:8s;animation-delay:-4s;">🃏</div>
 
   <div class="hero-content">
+    <div class="hero-socials fade-up">
+      <a class="hero-social" href="https://www.instagram.com/slotty_tam/" target="_blank" rel="noopener">📸 Instagram</a>
+      <a class="hero-social" href="https://www.youtube.com/@SlottyTam" target="_blank" rel="noopener">▶️ YouTube</a>
+    </div>
     <div class="hero-badge fade-up">The Ultimate Fun Discovery Platform</div>
     <h1 class="hero-title fade-up fade-up-d1">
       <span class="line1">Find Your Next</span>
