@@ -1,5 +1,5 @@
 {
-  "version": "5-barona-photo",
+  "version": "6-pala-photo",
   "image_default_credit": "Representative photo · Flickr Creative Commons via LoremFlickr",
   "listings": [
     {
@@ -49,7 +49,8 @@
       "emoji": "🎰", "rating": 4.5, "price_label": "Free Entry",
       "tags": ["San Diego", "Pala", "Casino", "Spa", "Resort"],
       "featured": 0, "featured_slot": null, "tams_pick": 0, "badge": null, "thumb_class": "g1",
-      "image_url": "https://loremflickr.com/800/600/casino?lock=105"
+      "image_url": "/images/pala.jpg",
+      "image_credit": "Photo: Pala Casino Spa & Resort"
     },
     {
       "name": "Valley View Casino & Hotel", "category": "casino", "city": "Valley Center", "state": "CA",
